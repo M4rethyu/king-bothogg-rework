@@ -32,9 +32,9 @@ exports.run = async (client, message, arguments, options, permission) => {
 };
 
 exports.config = {
-	"cooldown" : 5,
+	"cooldown" : 0,
 	"sharedCooldown" : true,
-	"permission" : 5,
+	"permission" : 0,
 	"syntax" : [
 		
 	],
@@ -43,6 +43,6 @@ exports.config = {
 };
 
 exports.condition = (client, message, arguments, options, permission) => {
-	if (message.mentions.users.has(client.discord.user.id)) return true;
+	if (arguments._command === "ask") return true;
 	return false;
 };
