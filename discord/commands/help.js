@@ -64,8 +64,6 @@ exports.run = async (client, message, arguments, options, permission) => {
 		});
 	}
 	
-	console.log(helps)
-	
 	var fields = [];
 	
 	for (const help of Array.from(helps.values())) {
