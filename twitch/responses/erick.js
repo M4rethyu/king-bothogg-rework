@@ -1,6 +1,8 @@
 exports.run = async (client, message, channel, userstate, arguments, options) => {
+	const name = userstate.username;
+	
 	var n = 1; var sum = 1;
-	var nAdd = client.persist("twitch.commands.erick." + userstate.username);
+	var nAdd = client.persist("twitch.commands.erick." + name);
 	var sumAdd = client.persist.twitchCommandTotal("erick");
 	
 	if ((typeof nAdd) == "number") n += nAdd
