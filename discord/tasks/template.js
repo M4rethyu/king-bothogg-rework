@@ -6,7 +6,7 @@ exports.run = async (client) => {
 exports.config = {
 	"cooldown" : 20,
 	"initial" : 10,
-	"time" : ["00:32:20","00:32:30"]
+	"time" : ["13:37:42"]
 	
 };
 
