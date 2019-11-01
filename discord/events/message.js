@@ -182,7 +182,7 @@ module.exports = async (client, message) => {
 				
 				var args;
 				var index;
-				[string, args, index] = client./*discord.*/getArguments(message, entry, string);
+				[string, args, index] = client.getArguments(message, entry, string);
 				
 				arguments._rest = string;
 				arguments._syntax = index;
@@ -214,7 +214,7 @@ module.exports = async (client, message) => {
 				
 				var args;
 				var index;
-				[string, args, index] = client.discord.getArguments(message, entry, string);
+				[string, args, index] = client.getArguments(message, entry, string);
 				
 				arguments._rest = string;
 				arguments._syntax = index;
@@ -244,7 +244,7 @@ module.exports = async (client, message) => {
 			
 				var args;
 				var index;
-				[string, args, index] = client.discord.getArguments(message, entry, string);
+				[string, args, index] = client.getArguments(message, entry, string);
 				
 				arguments._rest = string;
 				arguments._syntax = index;
