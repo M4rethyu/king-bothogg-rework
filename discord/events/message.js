@@ -109,7 +109,7 @@ module.exports = async (client, message) => {
 	
 	// Do stalker things
 	if (client.discord.stalked && client.discord.stalked.includes(message.author.id)) { // Message author is stalked
-		if (Math.random() < 0.2) { // Have a chance to react
+		if (Math.random() < 0.1) { // Have a chance to react
 			message.react(client.discord.emojis.find(e => e.id == "630810684648587295")); // React with :bothogg:
 		}
 	}
