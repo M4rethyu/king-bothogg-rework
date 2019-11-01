@@ -4,7 +4,7 @@ module.exports = (client) => {
 	// Functions bound to client
 	client.checkHosted = () =>
 	{
-		return (process.env.PROJECT_DOMAIN == "king-bothogg");
+		return (process.env.PROJECT_DOMAIN == "m4rethyu-king-bothogg-rework");
 	}
 	
 	client.log = (type, message) =>
