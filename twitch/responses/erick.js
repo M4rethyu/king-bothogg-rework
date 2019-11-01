@@ -8,7 +8,7 @@ exports.run = async (client, message, channel, userstate, arguments, options) =>
 	
 	const name = userstate["display-name"];
 	
-	client.twitch.say(channel, "@" + userstate["display-name"] + " " + client.answers.erick + " (" + n + " times by " + name + ", " + sum + " times total)");
+	client.twitch.say(channel, "@" + name + " " + client.answers.erick + " (" + n + " times by " + name + ", " + sum + " times total)");
 	return;
 };
 

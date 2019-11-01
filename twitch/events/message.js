@@ -248,5 +248,12 @@ module.exports = async (client, channel, userstate, message, self) => {
 	logMessage += "]";
 	client.log("twitch", logMessage);
 	
+	for (const name of commands.concat(responses)) {
+		// Count command usage by users
+		const n = client.persist("twitch.commands." + name + "." + username);
+		if (n == null) n = 0;
+		else client.persist("twitch.commands." + name + "." + username, n + 1);
+	}
+	
 	return;
 }
