@@ -39,7 +39,7 @@ module.exports = async (client, message) => {
 	var permission = permissionLevel;
 	
 	// Temporary: block all plebs
-	if (permission > 3) return;
+	//if (permission > 3) return;
 	
 	// Extract Options from string
 	var regex = /\-[a-zA-Z][a-zA-Z0-9]*(\s+[a-zA-Z0-9]+)*/g

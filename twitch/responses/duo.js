@@ -15,6 +15,8 @@ exports.config = {
 };
 
 exports.condition = (client, message, channel, userstate, arguments, options) => {
+	return false; // Disable for now
+	
 	const wordDelim = client.spelling.wordDelimiter;
 	const sentDelim = client.spelling.sentenceDelimiter;
 	

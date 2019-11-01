@@ -13,7 +13,7 @@ exports.run = async (client, message, channel, userstate, arguments, options) =>
 exports.config = {
 	"cooldown" : 0,
 	"sharedCooldown" : true,
-	"permission" : 0,
+	"permission" : 5,
 	"syntax" : [
 		
 	],
