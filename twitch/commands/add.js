@@ -3,6 +3,11 @@ exports.run = async (client, channel, userstate, arguments, options) => {
 	amount = arguments.amount;
 	target = arguments.user;
 	
+	if (!amount) {
+		client.twitch.say(channel, "@" + target + ", please specify a valid amount")
+		return;
+	}
+	
 	const before = client.currency(target);
 	client.currency(target, amount);
 	const after = client.currency(target);
