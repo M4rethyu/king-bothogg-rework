@@ -4,12 +4,14 @@ exports.run = async (client, message, arguments, options, permission) => {
 	target = arguments.member;
 	silent = (options.get("s")?true:false);
 	
-	var abbreviation = arguments.rank.trim();
 	
-	if (abbreviation == "") {
+	
+	if (arguments.rank == null) {
 		if (!silent) channel.send(message.author + ", please specify a rank");
 		return false;
 	}
+	
+	var abbreviation = arguments.rank.trim();
 	abbreviation = abbreviation.toLowerCase();
 	
 	var rank;
