@@ -38,7 +38,7 @@ exports.config = {
 	"syntax" : [
 		
 	],
-	"channels" : "spam",
+	"channels" : "ask",
 	"help" : "Ask the bot a yes/no question"
 };
 
