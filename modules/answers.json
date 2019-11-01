@@ -1,0 +1,21 @@
+{
+	"runes" : "you can find runes on Erick's op.gg",
+	"erick" : "Erick's name is spelled \"E-R-I-C-K\"",
+	"nidhogg" : "Erick's name is spelled \"N-I-D-H-O-G-G\"",
+	"social" : "If you're enjoying the content, make sure to keep updated at: discord.gg/ktXqPMD and https://twitter.com/kingnidhogg , or engage with my youtube at: https://www.youtube.com/c/kingnidhogg",
+	"currency" : "nidcoin",
+	"currencies" : "nidcoins",
+	"commands" : {
+		"ask" : {
+			"yes" : [
+				"yes"
+			],
+			"maybe" : [
+				"maybe"
+			],
+			"no" : [
+				"no"
+			]
+		}
+	}
+}
