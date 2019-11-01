@@ -22,6 +22,6 @@ exports.config = {
 };
 
 exports.condition = (client, message, channel, userstate, arguments, options) => {
-	if (arguments._command === "template") return true;
+	if (arguments._command === "daily") return true;
 	return false;
 };
