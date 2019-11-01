@@ -1,4 +1,4 @@
-exports.run = async (client, channel, userstate, arguments, options) => {
+exports.run = async (client, message, channel, userstate, arguments, options) => {
 	client.twitch.say(channel, client.runesToMessage());
 	return;
 };
@@ -14,11 +14,11 @@ exports.config = {
 	"help" : "Show runes of current game."
 };
 
-exports.condition = (client, channel, userstate, arguments, options) => {
+exports.condition = (client, message, channel, userstate, arguments, options) => {
 	const wordDelim = client.spelling.wordDelimiter;
 	const sentDelim = client.spelling.sentenceDelimiter;
 	
-	content = content.toLowerCase();
+	content = message.toLowerCase();
 	
 	// Sentence has word staring with "w", followed by "runes"
 	var regex1 = new RegExp(sentDelim + "[^.!?;]*(\\bw\\w+\\b)" + "[^.!?;]*" + "runes" + "[^.!?;]*" + sentDelim, "g");

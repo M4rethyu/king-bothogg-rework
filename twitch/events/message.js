@@ -117,7 +117,7 @@ module.exports = async (client, channel, userstate, message, self) => {
 		const name = entry[0];
 		const functions = entry[1];
 		// Note, that arguments of the function were not yet parsed. Only the command name is transferred through the variable "arguments" (if it exists);
-		if (functions.condition(client, channel, userstate, arguments, options)) {
+		if (functions.condition(client, message, channel, userstate, arguments, options)) {
 			// Condition allows running
 			// Check cooldown
 			if (client.twitch.getCooldown(functions, username) && permissionLevel > 3) {
@@ -176,7 +176,7 @@ module.exports = async (client, channel, userstate, message, self) => {
 				if (command) commands.push(name);
 				else responses.push(name);
 				
-				functions.run(client, channel, userstate, arguments, options);
+				functions.run(client, message, channel, userstate, arguments, options);
 				
 				client.twitch.setCooldown(functions, username);
 				
@@ -208,7 +208,7 @@ module.exports = async (client, channel, userstate, message, self) => {
 				if (command) commands.push(name);
 				else responses.push(name);
 				
-				functions.run(client, channel, userstate, arguments, options);
+				functions.run(client, message, channel, userstate, arguments, options);
 				client.twitch.setCooldown(functions, username);
 				
 				break; // Stop checking once one responses was triggered
@@ -238,7 +238,7 @@ module.exports = async (client, channel, userstate, message, self) => {
 				if (command) commands.push(name);
 				else responses.push(name);
 				
-				functions.run(client, channel, userstate, arguments, options);
+				functions.run(client, message, channel, userstate, arguments, options);
 				client.twitch.setCooldown(functions, username);
 				
 			// Don't stop checking once one responses was triggered (no "break;")

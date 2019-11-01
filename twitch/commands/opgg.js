@@ -1,4 +1,4 @@
-exports.run = async (client, channel, userstate, arguments, options) => {
+exports.run = async (client, message, channel, userstate, arguments, options) => {
 	client.twitch.say(channel, client.currentAccount());
 	return;
 };
@@ -14,7 +14,7 @@ exports.config = {
 	"help" : "Link Erick's op.gg."
 };
 
-exports.condition = (client, channel, userstate, arguments, options) => {
+exports.condition = (client, message, channel, userstate, arguments, options) => {
 	if (arguments._command === "op.gg" || arguments._command === "opgg") return true;
 	return false;
 };

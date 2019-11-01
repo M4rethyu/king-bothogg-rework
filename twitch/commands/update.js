@@ -1,4 +1,4 @@
-exports.run = async (client, channel, userstate, arguments, options) => {
+exports.run = async (client, message, channel, userstate, arguments, options) => {
 	
 	client.log("log+", "UPDATING REPOSITORY");
 	
@@ -27,7 +27,7 @@ exports.config = {
 	"help" : "Updates the repository."
 };
 
-exports.condition = (client, channel, userstate, arguments, options) => {
+exports.condition = (client, message, channel, userstate, arguments, options) => {
 	if (arguments._command === "update") return true;
 	return false;
 };

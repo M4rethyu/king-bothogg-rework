@@ -1,4 +1,4 @@
-exports.run = async (client, channel, userstate, arguments, options) => {
+exports.run = async (client, message, channel, userstate, arguments, options) => {
 	
 	var self = false;
 	var target = arguments.user;
@@ -27,7 +27,7 @@ exports.config = {
 	"help" : "Shows a user's balance."
 };
 
-exports.condition = (client, channel, userstate, arguments, options) => {
+exports.condition = (client, message, channel, userstate, arguments, options) => {
 	if (arguments._command === "coins") return true;
 	return false;
 };

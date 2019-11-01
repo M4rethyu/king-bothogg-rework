@@ -1,4 +1,4 @@
-exports.run = async (client, channel, userstate, arguments, options) => {
+exports.run = async (client, message, channel, userstate, arguments, options) => {
 	client.twitch.say(channel, "template");
 	return;
 };
@@ -14,6 +14,6 @@ exports.config = {
 	"help" : "A template for responses, so I can just copy paste"
 };
 
-exports.condition = (client, channel, userstate, arguments, options) => {
+exports.condition = (client, message, channel, userstate, arguments, options) => {
 	return false;
 };

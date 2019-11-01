@@ -1,4 +1,4 @@
-exports.run = async (client, channel, userstate, arguments, options) => {
+exports.run = async (client, message, channel, userstate, arguments, options) => {
 	client.twitch.linkSocialMedia(channel);
 	return;
 };
@@ -14,7 +14,7 @@ exports.config = {
 	"help" : "Link Erick's social media."
 };
 
-exports.condition = (client, channel, userstate, arguments, options) => {
+exports.condition = (client, message, channel, userstate, arguments, options) => {
 	if (arguments._command === "social") return true;
 	return false;
 };

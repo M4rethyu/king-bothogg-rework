@@ -1,4 +1,4 @@
-exports.run = async (client, channel, userstate, arguments, options) => {
+exports.run = async (client, message, channel, userstate, arguments, options) => {
 	client.twitch.say(channel, "!duo");
 	return;
 };
@@ -14,11 +14,11 @@ exports.config = {
 	"help" : "Show duo partner."
 };
 
-exports.condition = (client, channel, userstate, arguments, options) => {
+exports.condition = (client, message, channel, userstate, arguments, options) => {
 	const wordDelim = client.spelling.wordDelimiter;
 	const sentDelim = client.spelling.sentenceDelimiter;
 	
-	content = content.toLowerCase();
+	content = message.toLowerCase();
 	
 	// Sentence has "who", followed by "duo"
 	var regex1 = new RegExp(sentDelim + "[^.!?;]*who" + "[^.!?;]*" + "duo" + "[^.!?;]*" + sentDelim, "g");

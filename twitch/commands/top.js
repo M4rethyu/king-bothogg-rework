@@ -1,4 +1,4 @@
-exports.run = async (client, channel, userstate, arguments, options) => {
+exports.run = async (client, message, channel, userstate, arguments, options) => {
 	const number = arguments.number;
 	
 	if (number > 5 && userstate.permission > 3) {
@@ -45,7 +45,7 @@ exports.config = {
 	"help" : "Show the top n nidcoin holders"
 };
 
-exports.condition = (client, channel, userstate, arguments, options) => {
+exports.condition = (client, message, channel, userstate, arguments, options) => {
 	if (arguments._command === "top") return true;
 	return false;
 };

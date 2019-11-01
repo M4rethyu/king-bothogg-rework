@@ -1,4 +1,4 @@
-exports.run = async (client, channel, userstate, arguments, options) => {
+exports.run = async (client, message, channel, userstate, arguments, options) => {
 	
 	amount = arguments.amount;
 	target = arguments.user;
@@ -27,7 +27,7 @@ exports.config = {
 	"help" : "Add some amount to user's nidcoin balance."
 };
 
-exports.condition = (client, channel, userstate, arguments, options) => {
+exports.condition = (client, message, channel, userstate, arguments, options) => {
 	if (arguments._command === "add") return true;
 	return false;
 };
