@@ -9,11 +9,9 @@ exports.run = async (client) => {
 exports.config = {
 	"cooldown" : 60,
 	"initial" : 5
-	
 };
 
 exports.condition = (client) => {
-	console.log(client.league.active)
-	if (client.league.active) return true;
+	if (client.league.config.active) return true;
 	return false;
 };

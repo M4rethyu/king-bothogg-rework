@@ -64,7 +64,6 @@ async function main() {
 	});
 	client.league.config = require("./league/config.json");
 	
-	
 	require("./discord/functions.js")(client); // Bind functions directly to client
 	require("./twitch/functions.js")(client); // Bind functions directly to client
 	require("./functions.js")(client); // Bind functions directly to client

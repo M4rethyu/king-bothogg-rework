@@ -18,12 +18,12 @@ module.exports = (client) => {
 			return;
 		}
 		
-		functions.config.lastUsed = (new Date()).getTime() + (-functions.config.cooldown + Math.max(functions.config.initial, 0)) * 1000; // Set initial cooldown (is in seconds)
+		functions.lastUsed = (new Date()).getTime() + (-functions.config.cooldown + Math.max(functions.config.initial, 0)) * 1000; // Set initial cooldown (is in seconds)
 		
 		// Need to give function as argument to localize it, so overwriting the function in this scope doesn't change it inside itself
-		executeTask = (executeTask) => {
+		executeTask = (executeTask, functions) => {
 			const time = (new Date()).getTime();
-			const last = functions.config.lastUsed;
+			const last = functions.lastUsed;
 			const cooldown = functions.config.cooldown * 1000; // Cooldown is in seconds
 			
 			const remaining = last + cooldown - time + 50; // Add 50 to make sure
@@ -31,12 +31,12 @@ module.exports = (client) => {
 			setTimeout(async function() {
 				if (functions.condition(client)) {
 					functions.run(client);
-					functions.config.lastUsed = (new Date()).getTime();
 				}
-				executeTask(executeTask);
+				functions.lastUsed = (new Date()).getTime();
+				executeTask(executeTask, functions);
 			}, remaining);
 		}
-		executeTask(executeTask);
+		executeTask(executeTask, functions);
 	}
 	client.taskTime = (entry) =>  { // Handle running a task at a set time
 		const name = entry[0];
