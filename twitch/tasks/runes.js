@@ -13,6 +13,7 @@ exports.config = {
 };
 
 exports.condition = (client) => {
+	console.log(client.league.active)
 	if (client.league.active) return true;
 	return false;
 };
