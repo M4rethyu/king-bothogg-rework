@@ -43,7 +43,7 @@ exports.config = {
 		
 	],
 	"channels" : "ask",
-	"help" : "Ask the bot a yes/no question"
+	"help" : "Ask a yes/no question"
 };
 
 exports.condition = (client, message, arguments, options, permission) => {
