@@ -49,5 +49,5 @@ exports.config = {
 };
 
 exports.condition = (client) => {
-	return true;
+	return false;
 };
