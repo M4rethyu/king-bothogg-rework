@@ -11,5 +11,5 @@ exports.config = {
 };
 
 exports.condition = (client) => {
-	return false;
+	return true;
 };
