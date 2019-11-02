@@ -1,4 +1,5 @@
 exports.run = async (client) => {
+	client.log("log", "runes task")
 	client.getSummonerRunes().then(runes =>  {
 		client.erick.summonerRunes = runes;
 	});
