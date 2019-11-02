@@ -246,7 +246,7 @@ module.exports = async (client, channel, userstate, message, self) => {
 	}
 	
 	logMessage += "]";
-	client.log("twitch", logMessage);
+	client.log("twitch", logMessage.replace(/[_*~]/g, "\\$&"));
 	
 	for (const name of commands.concat(responses)) {
 		// Count command usage by users
