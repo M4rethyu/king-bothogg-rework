@@ -32,10 +32,10 @@ exports.config = {
 		"channel_c:this user_u:this number_n:0 role_r"
 	],
 	"channels" : "spam",
-	"help" : "A template for responses, so I can just copy paste"
+	"help" : "Shortcut syntax to avoid typing out commands"
 };
 
 exports.condition = (client, message, arguments, options, permission) => {
-	if (arguments._string.trim() == "") return true;
+	if (arguments._string.trim() == "" && !message.content.trim() == "" ) return true;
 	return false;
 };
