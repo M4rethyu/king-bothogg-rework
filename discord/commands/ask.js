@@ -25,7 +25,11 @@ exports.run = async (client, message, arguments, options, permission) => {
 	}
 	
 	const answers = client.answers.commands.ask[type]
-	const answer = answers[Math.floor(Math.random()*answers.length)];
+	var answer = answers[Math.floor(Math.random()*answers.length)];
+	
+	if (message.content.includes("cult")) {
+		answer = "This is not a cult."
+	}
 	
 	message.channel.send(answer);
 	return;
