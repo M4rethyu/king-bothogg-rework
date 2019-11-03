@@ -13,6 +13,11 @@ exports.run = async (client, message, channel, userstate, arguments, options) =>
 		return false;
 	}
 	
+	if (!target) {
+		client.twitch.say(channel, "@" + userstate.username + ", please specify a valid target");
+		return false;
+	}
+	
 	const before = client.currency(target);
 	client.currency(userstate.username, -amount);
 	client.currency(target, amount);
