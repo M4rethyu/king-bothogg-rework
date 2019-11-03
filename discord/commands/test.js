@@ -1,8 +1,14 @@
 exports.run = async (client, message, arguments, options, permission) => {
 	
-	console.log(message)
+	var name = "xmarethyu";
+	var amount = 1;
 	
-	message.channel.send("test successful");
+	
+	var result = client.currency(name, amount);
+	//*/
+	
+	console.log(client.persist("currency.amount." + name))
+	console.log(result);
 	
 	return;
 };
