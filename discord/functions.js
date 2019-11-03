@@ -24,6 +24,10 @@ module.exports = (client) => {
 	{
 		return client.discord.channels.get(client.discord.config.cultID[0]);
 	}
+	client.discord.pummelChannel = () =>
+	{
+		return client.discord.channels.get(client.discord.config.pummelID[0]);
+	}
 	
 	// Get and set cooldowns
 	client.discord.getCooldown = (functions, id) =>

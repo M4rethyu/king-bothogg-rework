@@ -150,7 +150,9 @@ module.exports = async (client, message) => {
 				"log" : client.discord.config.logID,
 				"console" : client.discord.config.consoleID,
 				"spam" : client.discord.config.spamID,
-				"ask" : client.discord.config.askID
+				"ask" : client.discord.config.askID,
+				"cult" : client.discord.config.cultID,
+				"pummel" : client.discord.config.pummelID
 			}
 			var channels = new Array(); // Initialize array of viable channels
 			for (const category of functions.config.channels.split(/\s+/)) {
