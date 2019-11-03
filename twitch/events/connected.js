@@ -3,11 +3,8 @@ module.exports = async (client, address, port) => {
 	
 	// Get summoner accounts
 	if (client.league.config.active) {
-		(async () => { // Initialize LoL stuff
-			// Get LoL Accounts
-			client.erick.summonerAccounts = await client.getSummonerAccounts();
-			client.log("log", "loaded the LoL accounts: " + Array.from(client.erick.summonerAccounts, o => o.name).join(", "));
-		});
+		client.erick.summonerAccounts = await client.getSummonerAccounts();
+		client.log("log", "loaded the LoL accounts: " + Array.from(client.erick.summonerAccounts, o => o.name).join(", "));
 	}
 	
 	for (const entry of client.twitch.tasks) {
